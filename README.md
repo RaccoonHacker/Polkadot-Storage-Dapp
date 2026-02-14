@@ -11,5 +11,35 @@
 4 通过交易将数据写入区块链。
 
 5 更新一个数字存储到区块链
+## Quick Start
+
+### 1. Deploy the Contract
+
+**Deploy with Hardhat Ignition:**
+```bash
+cd storage-contract
+npm install
+# Set your PRIVATE_KEY using Hardhat keystore
+npx hardhat keystore set PRIVATE_KEY
+npm run compile
+npm run deploy
+```
+
+### 2. Set Up the dApp
+
+```bash
+cd dapp
+npm install
+# Update CONTRACT_ADDRESS in app/utils/contract.ts with your deployed contract address
+npm run dev
+```
+
+Open http://localhost:3000
+## Network Configuration
+
+- **Chain ID**: 420420417
+- **RPC URL**: https://services.polkadothub-rpc.com/testnet
+- **Network Name**: Polkadot Hub TestNet
+- **Currency**: PAS (Polkadot Asset System)
 
 <img width="1707" height="952" alt="zero to hero" src="https://github.com/user-attachments/assets/df38f48c-657e-4759-913d-64bc4e8639a0" />
